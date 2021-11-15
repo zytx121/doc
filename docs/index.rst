@@ -1,7 +1,7 @@
-Welcome to AlphaRotate's documentation!
+Welcome to ZeroRotate's documentation!
 =========================================
 
-**AlphaRotate** is an open-source Tensorflow benchmark for performing scalable rotation detection on various datasets, which is maintained by `Xue Yang <https://yangxue0827.github.io/>`_ with Shanghai Jiao Tong University supervised by Prof. `Junchi Yan <http://thinklab.sjtu.edu.cn>`_.
+**ZeroRotate** is an open-source PyTorch benchmark for performing scalable rotation detection on various datasets, which is maintained by `Yue Zhou <https://yangxue0827.github.io/>`_ and `Xue Yang <https://yangxue0827.github.io/>`_ with Shanghai Jiao Tong University supervised by Prof. `Jiang Xue <https://sp.sjtu.edu.cn/>`_.
 
 This repository is developed for the following purposes:
 
