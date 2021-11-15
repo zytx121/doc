@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Run the Experiment &mdash; AlphaRotate  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  <script id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="API Reference" href="../api/src.html" />
+    <link rel="prev" title="Installation" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../index.html" class="icon icon-home"> AlphaRotate
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption"><span class="caption-text">User Guide</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to Rotation Detection</a></li>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Run the Experiment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#download-model">Download Model</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#pretrain-weights">Pretrain weights</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#trained-weights">Trained weights</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#compile">Compile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#train">Train</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#train-and-evaluation">Train and Evaluation</a></li>
+</ul>
+</li>
+</ul>
+<p class="caption"><span class="caption-text">API Reference</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../api/src.html">API Reference</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">AlphaRotate</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Run the Experiment</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/guide/experiment.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="run-the-experiment">
+<h1>Run the Experiment<a class="headerlink" href="#run-the-experiment" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="download-model">
+<h2>Download Model<a class="headerlink" href="#download-model" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="pretrain-weights">
+<h3>Pretrain weights<a class="headerlink" href="#pretrain-weights" title="Permalink to this headline">¶</a></h3>
+<p>Download a pretrain weight you need from the following three options, and then put it to <a class="reference external" href="https://github.com/yangxue0827/RotationDetection/blob/main/dataloader/pretrained_weights">pretrained_weights</a>.</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>MxNet pretrain weights (recommend in this repo, default in <a class="reference external" href="https://github.com/yangxue0827/RotationDetection/blob/main/libs/configs/_base_/models/retinanet_r50_fpn.py">NET_NAME</a>): resnet_v1d, resnet_v1b, refer to <a class="reference external" href="https://github.com/yangxue0827/RotationDetection/blob/main/thirdparty/gluon2TF/README.md">gluon2TF</a>.</dt><dd><ol class="arabic simple">
+<li><p><a class="reference external" href="https://pan.baidu.com/s/1GpqKg0dOaaWmwshvv1qWGg">Baidu Drive (5ht9)</a></p></li>
+<li><p><a class="reference external" href="https://drive.google.com/drive/folders/1BM8ffn1WnsRRb5RcuAcyJAHX8NS2M1Gz?usp=sharing">Google Drive</a></p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p>Tensorflow pretrain weights: <a class="reference external" href="http://download.tensorflow.org/models/resnet_v1_50_2016_08_28.tar.gz">resnet50_v1</a>, <a class="reference external" href="http://download.tensorflow.org/models/resnet_v1_101_2016_08_28.tar.gz">resnet101_v1</a>, <a class="reference external" href="http://download.tensorflow.org/models/resnet_v1_152_2016_08_28.tar.gz">resnet152_v1</a>, <a class="reference external" href="https://github.com/tensorflow/tpu/tree/master/models/official/efficientnet">efficientnet</a>, <a class="reference external" href="https://storage.googleapis.com/mobilenet_v2/checkpoints/mobilenet_v2_1.0_224.tgz">mobilenet_v2</a>, darknet53 (<a class="reference external" href="https://pan.baidu.com/s/1p8V9aaivo9LNxa_OjXjUwA">Baidu Drive (1jg2)</a>, <a class="reference external" href="https://drive.google.com/drive/folders/1zyg1bvdmLxNRIXOflo_YmJjNJdpHX2lJ?usp=sharing">Google Drive</a>).</p></li>
+<li><dl class="simple">
+<dt>Pytorch pretrain weights, refer to <a class="reference external" href="https://github.com/yangxue0827/RotationDetection/blob/main/dataloader/pretrained_weights/pretrain_zoo.py">pretrain_zoo.py</a> and <a class="reference external" href="https://github.com/yangxue0827/RotationDetection/blob/main/OTHERS.md">Others</a>.</dt><dd><ol class="arabic simple">
+<li><p><a class="reference external" href="https://pan.baidu.com/s/16nHwlkPsszBvzhMv4h2IwA">Baidu Drive (oofm)</a></p></li>
+<li><p><a class="reference external" href="https://drive.google.com/drive/folders/14Bx6TK4LVadTtzNFTQj293cKYk_5IurH?usp=sharing">Google Drive</a></p></li>
+</ol>
+</dd>
+</dl>
+</li>
+</ul>
+</div>
+<div class="section" id="trained-weights">
+<h3>Trained weights<a class="headerlink" href="#trained-weights" title="Permalink to this headline">¶</a></h3>
+<p>Please download trained models by this project, then put them to <a class="reference external" href="https://github.com/yangxue0827/RotationDetection/blob/main/output/trained_weights">trained_weights</a>.</p>
+</div>
+</div>
+<div class="section" id="compile">
+<h2>Compile<a class="headerlink" href="#compile" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd $PATH_ROOT/libs/utils/cython_utils
+rm *.so
+rm *.c
+rm *.cpp
+python setup.py build_ext --inplace (or make)
+
+cd $PATH_ROOT/libs/utils/
+rm *.so
+rm *.c
+rm *.cpp
+python setup.py build_ext --inplace
+</pre></div>
+</div>
+</div>
+<div class="section" id="train">
+<h2>Train<a class="headerlink" href="#train" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><dl class="simple">
+<dt>If you want to train your own dataset, please note:</dt><dd><ol class="arabic simple">
+<li><p>Select the detector and dataset you want to use, and mark them as <code class="docutils literal notranslate"><span class="pre">#DETECTOR</span></code> and <code class="docutils literal notranslate"><span class="pre">#DATASET</span></code> (such as <code class="docutils literal notranslate"><span class="pre">#DETECTOR=retinanet</span></code> and <code class="docutils literal notranslate"><span class="pre">#DATASET=DOTA</span></code>)</p></li>
+<li><p>Modify parameters (such as <code class="docutils literal notranslate"><span class="pre">CLASS_NUM</span></code>, <code class="docutils literal notranslate"><span class="pre">DATASET_NAME</span></code>, <code class="docutils literal notranslate"><span class="pre">VERSION</span></code>, etc.) in <code class="docutils literal notranslate"><span class="pre">$PATH_ROOT/libs/configs/#DATASET/#DETECTOR/cfgs_xxx.py</span></code></p></li>
+<li><p>Copy <code class="docutils literal notranslate"><span class="pre">$PATH_ROOT/libs/configs/#DATASET/#DETECTOR/cfgs_xxx.py</span></code> to <code class="docutils literal notranslate"><span class="pre">$PATH_ROOT/libs/configs/cfgs.py</span></code></p></li>
+<li><p>Add category information in <code class="docutils literal notranslate"><span class="pre">$PATH_ROOT/libs/label_name_dict/label_dict.py</span></code></p></li>
+<li><p>Add data_name to <code class="docutils literal notranslate"><span class="pre">$PATH_ROOT/dataloader/dataset/read_tfrecord.py</span></code></p></li>
+</ol>
+</dd>
+</dl>
+</li>
+<li><p><strong>Make tfrecord</strong></p></li>
+</ul>
+<p>If image is very large (such as DOTA dataset), the image needs to be cropped. Take DOTA dataset as a example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd $PATH_ROOT/dataloader/dataset/DOTA
+python data_crop.py
+</pre></div>
+</div>
+<p>If image does not need to be cropped, just convert the annotation file into xml format, refer to <a class="reference external" href="https://github.com/yangxue0827/RotationDetection/blob/main/example.xml">example.xml</a>.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd $PATH_ROOT/dataloader/dataset/
+python convert_data_to_tfrecord.py --root_dir=&#39;/PATH/TO/DOTA/&#39;
+                                   --xml_dir=&#39;labeltxt&#39;
+                                   --image_dir=&#39;images&#39;
+                                   --save_name=&#39;train&#39;
+                                   --img_format=&#39;.png&#39;
+                                   --dataset=&#39;DOTA&#39;
+</pre></div>
+</div>
+<ul class="simple">
+<li><p><strong>Start training</strong></p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd $PATH_ROOT/tools/#DETECTOR
+python train.py
+</pre></div>
+</div>
+</div>
+<div class="section" id="train-and-evaluation">
+<h2>Train and Evaluation<a class="headerlink" href="#train-and-evaluation" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>For large-scale image, take DOTA dataset as a example (the output file or visualization is in <code class="docutils literal notranslate"><span class="pre">$PATH_ROOT/tools/#DETECTOR/test_dota/VERSION</span></code>):</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd $PATH_ROOT/tools/#DETECTOR
+python test_dota.py --test_dir=&#39;/PATH/TO/IMAGES/&#39;
+                    --gpus=0,1,2,3,4,5,6,7
+                    -ms (multi-scale testing, optional)
+                    -s (visualization, optional)
+                    -cn (use cpu nms, slightly better &lt;1% than gpu nms but slower, optional)
+</pre></div>
+</div>
+<p>or (recommend in this repo, better than multi-scale testing)</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">test_dota_sota</span><span class="o">.</span><span class="n">py</span> <span class="o">--</span><span class="n">test_dir</span><span class="o">=</span><span class="s1">&#39;/PATH/TO/IMAGES/&#39;</span>
+                         <span class="o">--</span><span class="n">gpus</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span><span class="mi">2</span><span class="p">,</span><span class="mi">3</span><span class="p">,</span><span class="mi">4</span><span class="p">,</span><span class="mi">5</span><span class="p">,</span><span class="mi">6</span><span class="p">,</span><span class="mi">7</span>
+                         <span class="o">-</span><span class="n">s</span> <span class="p">(</span><span class="n">visualization</span><span class="p">,</span> <span class="n">optional</span><span class="p">)</span>
+                         <span class="o">-</span><span class="n">cn</span> <span class="p">(</span><span class="n">use</span> <span class="n">cpu</span> <span class="n">nms</span><span class="p">,</span> <span class="n">slightly</span> <span class="n">better</span> <span class="o">&lt;</span><span class="mi">1</span><span class="o">%</span> <span class="n">than</span> <span class="n">gpu</span> <span class="n">nms</span> <span class="n">but</span> <span class="n">slower</span><span class="p">,</span> <span class="n">optional</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In order to set the breakpoint conveniently, the read and write mode of the file is’ a+’. If the model of the same <code class="docutils literal notranslate"><span class="pre">#VERSION</span></code> needs to be tested again, the original test results need to be deleted.</p>
+</div>
+<ul class="simple">
+<li><p>For small-scale image, take HRSC2016 dataset as a example:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd $PATH_ROOT/tools/#DETECTOR
+python test_hrsc2016.py --test_dir=&#39;/PATH/TO/IMAGES/&#39;
+                        --gpu=0
+                        --image_ext=&#39;bmp&#39;
+                        --test_annotation_path=&#39;/PATH/TO/ANNOTATIONS&#39;
+                        -s (visualization, optional)
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Tensorboard</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd $PATH_ROOT/output/summary
+tensorboard --logdir=.
+</pre></div>
+</div>
+<img alt="guide/../../images/images.png" src="guide/../../images/images.png" />
+<img alt="guide/../../images/scalars.png" src="guide/../../images/scalars.png" />
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../api/src.html" class="btn btn-neutral float-right" title="API Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2021, Xue Yang.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
