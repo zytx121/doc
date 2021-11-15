@@ -18,9 +18,3 @@ This repository is developed for the following purposes:
    guide/installation
    guide/experiment
 
-.. toctree::
-   :maxdepth: 3
-   :caption: API Reference
-
-   api/src
-

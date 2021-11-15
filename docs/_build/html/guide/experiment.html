@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Run the Experiment &mdash; AlphaRotate  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>Run the Experiment &mdash; ZeroRotate  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -16,7 +16,6 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="API Reference" href="../api/src.html" />
     <link rel="prev" title="Installation" href="installation.html" /> 
 </head>
 
@@ -25,7 +24,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> AlphaRotate
+            <a href="../index.html" class="icon icon-home"> ZeroRotate
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -40,20 +39,10 @@
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to Rotation Detection</a></li>
 <li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Run the Experiment</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#download-model">Download Model</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#pretrain-weights">Pretrain weights</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#trained-weights">Trained weights</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#compile">Compile</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#train">Train</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#train-and-evaluation">Train and Evaluation</a></li>
 </ul>
 </li>
-</ul>
-<p class="caption"><span class="caption-text">API Reference</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../api/src.html">API Reference</a></li>
 </ul>
 
         </div>
@@ -62,7 +51,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">AlphaRotate</a>
+          <a href="../index.html">ZeroRotate</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -82,52 +71,6 @@
              
   <div class="section" id="run-the-experiment">
 <h1>Run the Experiment<a class="headerlink" href="#run-the-experiment" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="download-model">
-<h2>Download Model<a class="headerlink" href="#download-model" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="pretrain-weights">
-<h3>Pretrain weights<a class="headerlink" href="#pretrain-weights" title="Permalink to this headline">¶</a></h3>
-<p>Download a pretrain weight you need from the following three options, and then put it to <a class="reference external" href="https://github.com/yangxue0827/RotationDetection/blob/main/dataloader/pretrained_weights">pretrained_weights</a>.</p>
-<ul class="simple">
-<li><dl class="simple">
-<dt>MxNet pretrain weights (recommend in this repo, default in <a class="reference external" href="https://github.com/yangxue0827/RotationDetection/blob/main/libs/configs/_base_/models/retinanet_r50_fpn.py">NET_NAME</a>): resnet_v1d, resnet_v1b, refer to <a class="reference external" href="https://github.com/yangxue0827/RotationDetection/blob/main/thirdparty/gluon2TF/README.md">gluon2TF</a>.</dt><dd><ol class="arabic simple">
-<li><p><a class="reference external" href="https://pan.baidu.com/s/1GpqKg0dOaaWmwshvv1qWGg">Baidu Drive (5ht9)</a></p></li>
-<li><p><a class="reference external" href="https://drive.google.com/drive/folders/1BM8ffn1WnsRRb5RcuAcyJAHX8NS2M1Gz?usp=sharing">Google Drive</a></p></li>
-</ol>
-</dd>
-</dl>
-</li>
-<li><p>Tensorflow pretrain weights: <a class="reference external" href="http://download.tensorflow.org/models/resnet_v1_50_2016_08_28.tar.gz">resnet50_v1</a>, <a class="reference external" href="http://download.tensorflow.org/models/resnet_v1_101_2016_08_28.tar.gz">resnet101_v1</a>, <a class="reference external" href="http://download.tensorflow.org/models/resnet_v1_152_2016_08_28.tar.gz">resnet152_v1</a>, <a class="reference external" href="https://github.com/tensorflow/tpu/tree/master/models/official/efficientnet">efficientnet</a>, <a class="reference external" href="https://storage.googleapis.com/mobilenet_v2/checkpoints/mobilenet_v2_1.0_224.tgz">mobilenet_v2</a>, darknet53 (<a class="reference external" href="https://pan.baidu.com/s/1p8V9aaivo9LNxa_OjXjUwA">Baidu Drive (1jg2)</a>, <a class="reference external" href="https://drive.google.com/drive/folders/1zyg1bvdmLxNRIXOflo_YmJjNJdpHX2lJ?usp=sharing">Google Drive</a>).</p></li>
-<li><dl class="simple">
-<dt>Pytorch pretrain weights, refer to <a class="reference external" href="https://github.com/yangxue0827/RotationDetection/blob/main/dataloader/pretrained_weights/pretrain_zoo.py">pretrain_zoo.py</a> and <a class="reference external" href="https://github.com/yangxue0827/RotationDetection/blob/main/OTHERS.md">Others</a>.</dt><dd><ol class="arabic simple">
-<li><p><a class="reference external" href="https://pan.baidu.com/s/16nHwlkPsszBvzhMv4h2IwA">Baidu Drive (oofm)</a></p></li>
-<li><p><a class="reference external" href="https://drive.google.com/drive/folders/14Bx6TK4LVadTtzNFTQj293cKYk_5IurH?usp=sharing">Google Drive</a></p></li>
-</ol>
-</dd>
-</dl>
-</li>
-</ul>
-</div>
-<div class="section" id="trained-weights">
-<h3>Trained weights<a class="headerlink" href="#trained-weights" title="Permalink to this headline">¶</a></h3>
-<p>Please download trained models by this project, then put them to <a class="reference external" href="https://github.com/yangxue0827/RotationDetection/blob/main/output/trained_weights">trained_weights</a>.</p>
-</div>
-</div>
-<div class="section" id="compile">
-<h2>Compile<a class="headerlink" href="#compile" title="Permalink to this headline">¶</a></h2>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd $PATH_ROOT/libs/utils/cython_utils
-rm *.so
-rm *.c
-rm *.cpp
-python setup.py build_ext --inplace (or make)
-
-cd $PATH_ROOT/libs/utils/
-rm *.so
-rm *.c
-rm *.cpp
-python setup.py build_ext --inplace
-</pre></div>
-</div>
-</div>
 <div class="section" id="train">
 <h2>Train<a class="headerlink" href="#train" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
@@ -219,13 +162,12 @@ tensorboard --logdir=.
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="installation.html" class="btn btn-neutral float-left" title="Installation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../api/src.html" class="btn btn-neutral float-right" title="API Reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2021, Xue Yang.</p>
+    <p>&#169; Copyright 2021, Yue Zhou.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

@@ -1,43 +1,6 @@
 Run the Experiment
 ===================
 
-Download Model
--------------------
-
-Pretrain weights
-^^^^^^^^^^^^^^^^^^^^^^
-Download a pretrain weight you need from the following three options, and then put it to `pretrained_weights <https://github.com/yangxue0827/RotationDetection/blob/main/dataloader/pretrained_weights>`_.
-
-* MxNet pretrain weights (recommend in this repo, default in `NET_NAME <https://github.com/yangxue0827/RotationDetection/blob/main/libs/configs/_base_/models/retinanet_r50_fpn.py>`_): resnet_v1d, resnet_v1b, refer to `gluon2TF <https://github.com/yangxue0827/RotationDetection/blob/main/thirdparty/gluon2TF/README.md>`_.
-   1) `Baidu Drive (5ht9) <https://pan.baidu.com/s/1GpqKg0dOaaWmwshvv1qWGg>`_
-   2) `Google Drive <https://drive.google.com/drive/folders/1BM8ffn1WnsRRb5RcuAcyJAHX8NS2M1Gz?usp=sharing>`_
-
-* Tensorflow pretrain weights: `resnet50_v1 <http://download.tensorflow.org/models/resnet_v1_50_2016_08_28.tar.gz>`_, `resnet101_v1 <http://download.tensorflow.org/models/resnet_v1_101_2016_08_28.tar.gz>`_, `resnet152_v1 <http://download.tensorflow.org/models/resnet_v1_152_2016_08_28.tar.gz>`_, `efficientnet <https://github.com/tensorflow/tpu/tree/master/models/official/efficientnet>`_, `mobilenet_v2 <https://storage.googleapis.com/mobilenet_v2/checkpoints/mobilenet_v2_1.0_224.tgz>`_, darknet53 (`Baidu Drive (1jg2) <https://pan.baidu.com/s/1p8V9aaivo9LNxa_OjXjUwA>`_, `Google Drive <https://drive.google.com/drive/folders/1zyg1bvdmLxNRIXOflo_YmJjNJdpHX2lJ?usp=sharing>`_).
-
-* Pytorch pretrain weights, refer to `pretrain_zoo.py <https://github.com/yangxue0827/RotationDetection/blob/main/dataloader/pretrained_weights/pretrain_zoo.py>`_ and `Others <https://github.com/yangxue0827/RotationDetection/blob/main/OTHERS.md>`_.
-   1) `Baidu Drive (oofm) <https://pan.baidu.com/s/16nHwlkPsszBvzhMv4h2IwA>`_
-   2) `Google Drive <https://drive.google.com/drive/folders/14Bx6TK4LVadTtzNFTQj293cKYk_5IurH?usp=sharing>`_
-
-Trained weights
-^^^^^^^^^^^^^^^^^^^^^^
-Please download trained models by this project, then put them to `trained_weights <https://github.com/yangxue0827/RotationDetection/blob/main/output/trained_weights>`_.
-
-
-Compile
--------------------
-::
-
-    cd $PATH_ROOT/libs/utils/cython_utils
-    rm *.so
-    rm *.c
-    rm *.cpp
-    python setup.py build_ext --inplace (or make)
-
-    cd $PATH_ROOT/libs/utils/
-    rm *.so
-    rm *.c
-    rm *.cpp
-    python setup.py build_ext --inplace
 
 Train
 -------------------

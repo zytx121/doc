@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Installation &mdash; AlphaRotate  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <title>Installation &mdash; ZeroRotate  documentation</title><link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
@@ -25,7 +25,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../index.html" class="icon icon-home"> AlphaRotate
+            <a href="../index.html" class="icon icon-home"> ZeroRotate
           </a>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
@@ -39,15 +39,10 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="introduction.html">Introduction to Rotation Detection</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Installation</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#docker">Docker</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#manual-configuration">Manual configuration</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="experiment.html">Run the Experiment</a></li>
-</ul>
-<p class="caption"><span class="caption-text">API Reference</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../api/src.html">API Reference</a></li>
 </ul>
 
         </div>
@@ -56,7 +51,7 @@
 
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../index.html">AlphaRotate</a>
+          <a href="../index.html">ZeroRotate</a>
       </nav>
 
       <div class="wy-nav-content">
@@ -76,32 +71,16 @@
              
   <div class="section" id="installation">
 <h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="docker">
-<h2>Docker<a class="headerlink" href="#docker" title="Permalink to this headline">¶</a></h2>
-<p>We recommend using docker images if <a class="reference external" href="https://www.docker.com/">docker</a> or other container runtimes e.g. <a class="reference external" href="https://sylabs.io/singularity/">singularity</a> is available on your devices.</p>
-<p>We maintain a prebuilt image at <a class="reference external" href="https://hub.docker.com/u/yangxue2docker">dockerhub</a>:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yangxue2docker</span><span class="o">/</span><span class="n">yx</span><span class="o">-</span><span class="n">tf</span><span class="o">-</span><span class="n">det</span><span class="p">:</span><span class="n">tensorflow1</span><span class="o">.</span><span class="mf">13.1</span><span class="o">-</span><span class="n">cuda10</span><span class="o">-</span><span class="n">gpu</span><span class="o">-</span><span class="n">py3</span>
-</pre></div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>For 30xx series graphics cards (cuda11), please download image from <a class="reference external" href="https://docs.nvidia.com/deeplearning/frameworks/tensorflow-release-notes/rel_20-11.html#rel_20-11">tensorflow-release-notes</a> according to your development environment, e.g. nvcr.io/nvidia/tensorflow:20.11-tf1-py3</p>
-</div>
-</div>
 <div class="section" id="manual-configuration">
 <h2>Manual configuration<a class="headerlink" href="#manual-configuration" title="Permalink to this headline">¶</a></h2>
-<p>If docker is not available, we provide detailed steps to install the requirements by <code class="docutils literal notranslate"><span class="pre">pip</span></code>:</p>
+<p>We provide detailed steps to install the requirements by <code class="docutils literal notranslate"><span class="pre">pip</span></code>:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">r</span> <span class="n">requirements</span><span class="o">.</span><span class="n">txt</span>
 <span class="n">pip</span> <span class="n">install</span> <span class="o">-</span><span class="n">v</span> <span class="o">-</span><span class="n">e</span> <span class="o">.</span>  <span class="c1"># or &quot;python setup.py develop&quot;</span>
 </pre></div>
 </div>
 <p>Or, you can simply install AlphaRotate with the following commands:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">alpharotate</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">rmmdet</span>
 </pre></div>
-</div>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>For 30xx series graphics cards (cuda11), we recommend this <a class="reference external" href="https://blog.csdn.net/qq_39543404/article/details/112171851">blog</a> to install tf1.xx</p>
 </div>
 </div>
 </div>
@@ -117,7 +96,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2021, Xue Yang.</p>
+    <p>&#169; Copyright 2021, Yue Zhou.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
