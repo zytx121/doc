@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>Train</title>
+    
+          <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="_static/theme.css " type="text/css" />
+          <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="_static/theme-vendors.js"></script> -->
+      <script src="_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" />
+  <link rel="prev" title="Benchmark and Model Zoo" href="model_zoo.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    
+      <img class="logo" src="_static/logo.png" alt="logo"/>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-zerorotate-s-documentation"
+         class="nav-link ">
+         Get Started
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-zerorotate-s-documentation"
+         class="nav-link  router-link-active">
+         Quick Run
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-zerorotate-s-documentation"
+         class="nav-link ">
+         Links
+      </a>
+    </div>
+  
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-zerorotate-s-documentation"
+         class="nav-link ">
+         Get Started
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-zerorotate-s-documentation"
+         class="nav-link  router-link-active">
+         Quick Run
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-zerorotate-s-documentation"
+         class="nav-link ">
+         Links
+      </a>
+    </div>
+  
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-zerorotate-s-documentation">Get Started</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="get_started.html" class="reference internal ">Prerequisites</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="model_zoo.html" class="reference internal ">Benchmark and Model Zoo</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-zerorotate-s-documentation">Quick Run</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">Train</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#train" class="reference internal">Train</a></li>
+                
+                  <li class="toctree-l2"><a href="#test" class="reference internal">Test</a></li>
+                
+                  <li class="toctree-l2"><a href="#inference-submit" class="reference internal">Inference & Submit</a></li>
+                
+                  <li class="toctree-l2"><a href="#crop-images" class="reference internal">Crop Images</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-zerorotate-s-documentation">Links</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="https://github.com/zytx121/mmrotate" class="reference">GitHub <outboundlink></outboundlink></a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="https://rotationdetection.readthedocs.io/" class="reference">AlphaRotate <outboundlink></outboundlink></a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>Train</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="model_zoo.html"
+       title="previous chapter">← Benchmark and Model Zoo</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <div class="section" id="train">
+<h1>Train<a class="headerlink" href="#train" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="c1"># train</span>
+<span class="nv">CUDA_VISIBLE_DEVICES</span><span class="o">=</span><span class="m">0</span> <span class="nv">PORT</span><span class="o">=</span><span class="m">29500</span> <span class="se">\</span>
+./tools/dist_train.sh configs/rretinanet/rretinanet_obb_r50_fpn_1x_dota_v3.py <span class="m">1</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="test">
+<h1>Test<a class="headerlink" href="#test" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nv">CUDA_VISIBLE_DEVICES</span><span class="o">=</span><span class="m">0</span> <span class="nv">PORT</span><span class="o">=</span><span class="m">29500</span> <span class="se">\</span>
+./tools/dist_test.sh configs/rretinanet/rretinanet_obb_r50_fpn_1x_dota_v3.py <span class="se">\</span>
+        work_dirs/rretinanet_obb_r50_fpn_1x_dota_v3/epoch_12.pth <span class="m">1</span> --mAP
+</pre></div>
+</div>
+</div>
+<div class="section" id="inference-submit">
+<h1>Inference &amp; Submit<a class="headerlink" href="#inference-submit" title="Permalink to this headline">¶</a></h1>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span><span class="nv">CUDA_VISIBLE_DEVICES</span><span class="o">=</span><span class="m">0</span> <span class="nv">PORT</span><span class="o">=</span><span class="m">29500</span> <span class="se">\</span>
+./tools/dist_test.sh configs/rretinanet/rretinanet_obb_r50_fpn_1x_dota_v3.py <span class="se">\</span>
+        work_dirs/rretinanet_obb_r50_fpn_1x_dota_v3/epoch_12.pth <span class="m">1</span> --format-only<span class="se">\</span>
+        --eval-options <span class="nv">submission_dir</span><span class="o">=</span>work_dirs/rretinanet_obb_r50_fpn_1x_dota_v3/Task1_results 
+</pre></div>
+</div>
+</div>
+<div class="section" id="crop-images">
+<h1>Crop Images<a class="headerlink" href="#crop-images" title="Permalink to this headline">¶</a></h1>
+<p>For DOTA dataset, please crop the original images into 1024×1024 patches with an overlap of 200 by run</p>
+<div class="highlight-shell notranslate"><div class="highlight"><pre><span></span>python tools/split/img_split.py --base_json <span class="se">\</span>
+       tools/split/split_configs/split_configs/dota1_0/ss_trainval.json
+
+python tools/split/img_split.py --base_json <span class="se">\</span>
+       tools/split/split_configs/dota1_0/ss_test.json
+</pre></div>
+</div>
+<p>Please change path in <code class="docutils literal notranslate"><span class="pre">ss_trainval.json</span></code>, <code class="docutils literal notranslate"><span class="pre">ss_test.json</span></code> to your path. (Forked from <a class="reference external" href="https://github.com/jbwang1997/BboxToolkit">BboxToolkit</a>, which is faster then DOTA_Devkit.)</p>
+</div>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="model_zoo.html"
+       title="previous chapter">← Benchmark and Model Zoo</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2021, erenzhou.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.1.1 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>

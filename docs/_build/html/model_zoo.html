@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+      <title>Benchmark and Model Zoo</title>
+    
+          <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="_static/theme.css " type="text/css" />
+          <link rel="stylesheet" href="_static/copybutton.css" type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/clipboard.min.js"></script>
+        <script src="_static/copybutton.js"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="_static/theme-vendors.js"></script> -->
+      <script src="_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" />
+  <link rel="next" title="Train" href="exist_model.html" />
+  <link rel="prev" title="Prerequisites" href="get_started.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    
+      <img class="logo" src="_static/logo.png" alt="logo"/>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-zerorotate-s-documentation"
+         class="nav-link  router-link-active">
+         Get Started
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-zerorotate-s-documentation"
+         class="nav-link ">
+         Quick Run
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-zerorotate-s-documentation"
+         class="nav-link ">
+         Links
+      </a>
+    </div>
+  
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-zerorotate-s-documentation"
+         class="nav-link  router-link-active">
+         Get Started
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-zerorotate-s-documentation"
+         class="nav-link ">
+         Quick Run
+      </a>
+    </div>
+  
+    <div class="nav-item">
+      <a href="index.html#welcome-to-zerorotate-s-documentation"
+         class="nav-link ">
+         Links
+      </a>
+    </div>
+  
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-zerorotate-s-documentation">Get Started</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="get_started.html" class="reference internal ">Prerequisites</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">Benchmark and Model Zoo</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#baselines" class="reference internal">Baselines</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-zerorotate-s-documentation">Quick Run</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="exist_model.html" class="reference internal ">Train</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-zerorotate-s-documentation">Links</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="https://github.com/zytx121/mmrotate" class="reference">GitHub <outboundlink></outboundlink></a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="https://rotationdetection.readthedocs.io/" class="reference">AlphaRotate <outboundlink></outboundlink></a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>Benchmark and Model Zoo</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="get_started.html"
+       title="previous chapter">← Prerequisites</a>
+  </li>
+  <li class="next">
+    <a href="exist_model.html"
+       title="next chapter">Train →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <div class="section" id="benchmark-and-model-zoo">
+<h1>Benchmark and Model Zoo<a class="headerlink" href="#benchmark-and-model-zoo" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="baselines">
+<h2>Baselines<a class="headerlink" href="#baselines" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="retinanet-obb-hbb">
+<h3>RetinaNet OBB/HBB<a class="headerlink" href="#retinanet-obb-hbb" title="Permalink to this headline">¶</a></h3>
+<p>Please refer to <a class="reference external" href="https://github.com/zytx121/mmrotate/tree/main/configs/rretinanet">RetinaNet-OBB/HBB</a> for details.</p>
+</div>
+<div class="section" id="faster-r-cnn-obb">
+<h3>Faster R-CNN OBB<a class="headerlink" href="#faster-r-cnn-obb" title="Permalink to this headline">¶</a></h3>
+<p>Please refer to <a class="reference external" href="https://github.com/zytx121/mmrotate/tree/main/configs/">Faster R-CNN OBB</a> for details.</p>
+</div>
+<div class="section" id="roi-transformer">
+<h3>RoI Transformer<a class="headerlink" href="#roi-transformer" title="Permalink to this headline">¶</a></h3>
+<p>Please refer to <a class="reference external" href="https://github.com/zytx121/mmrotate/tree/main/configs/roi_trans">RoI Transformer</a> for details.</p>
+</div>
+<div class="section" id="r-sup-3-sup-det">
+<h3>R<sup>3</sup>Det<a class="headerlink" href="#r-sup-3-sup-det" title="Permalink to this headline">¶</a></h3>
+<p>Please refer to <a class="reference external" href="https://github.com/zytx121/mmrotate/tree/main/configs/r3det">R<sup>3</sup>Det</a> for details.</p>
+</div>
+<div class="section" id="gliding-vertex">
+<h3>Gliding Vertex<a class="headerlink" href="#gliding-vertex" title="Permalink to this headline">¶</a></h3>
+<p>Please refer to <a class="reference external" href="https://github.com/zytx121/mmrotate/tree/main/configs/gliding_vertex">Gliding Vertex</a> for details.</p>
+</div>
+<div class="section" id="s-sup-2-sup-a-net">
+<h3>S<sup>2</sup>A-Net<a class="headerlink" href="#s-sup-2-sup-a-net" title="Permalink to this headline">¶</a></h3>
+<p>Please refer to <a class="reference external" href="https://github.com/zytx121/mmrotate/tree/main/configs/s2anet">S<sup>2</sup>A-Net</a> for details.</p>
+</div>
+<div class="section" id="redet">
+<h3>ReDet<a class="headerlink" href="#redet" title="Permalink to this headline">¶</a></h3>
+<p>Please refer to <a class="reference external" href="https://github.com/zytx121/mmrotate/tree/main/configs/redet">ReDet</a> for details.</p>
+</div>
+<div class="section" id="oriented-r-cnn">
+<h3>Oriented R-CNN<a class="headerlink" href="#oriented-r-cnn" title="Permalink to this headline">¶</a></h3>
+<p>Please refer to <a class="reference external" href="https://github.com/zytx121/mmrotate/tree/main/configs/oriented_rcnn">Oriented R-CNN</a> for details.</p>
+</div>
+<div class="section" id="gwd">
+<h3>GWD<a class="headerlink" href="#gwd" title="Permalink to this headline">¶</a></h3>
+<p>Please refer to <a class="reference external" href="https://github.com/zytx121/mmrotate/tree/main/configs/gwd">GWD</a> for details.</p>
+</div>
+<div class="section" id="kfiou">
+<h3>KFIoU<a class="headerlink" href="#kfiou" title="Permalink to this headline">¶</a></h3>
+<p>Please refer to <a class="reference external" href="https://github.com/zytx121/mmrotate/tree/main/configs/kfiou">KFIoU</a> for details.</p>
+</div>
+<div class="section" id="deformable-detr-obb">
+<h3>Deformable DETR OBB<a class="headerlink" href="#deformable-detr-obb" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="kld">
+<h3>KLD<a class="headerlink" href="#kld" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+</div>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="get_started.html"
+       title="previous chapter">← Prerequisites</a>
+  </li>
+  <li class="next">
+    <a href="exist_model.html"
+       title="next chapter">Train →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2021, erenzhou.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.1.1 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>

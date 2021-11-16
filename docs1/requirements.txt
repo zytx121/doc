@@ -1,0 +1,5 @@
+m2r2
+easydict
+pyyaml
+sphinx==4.1.1
+furo
